@@ -21,7 +21,6 @@ def connect_to_sql():
 
 # Create the table structure
 def create_tables(cursor, table):
-    ## Add your code here. Starter code below
     cursor.execute('''CREATE TABLE IF NOT EXISTS Jobs_found (id INT PRIMARY KEY auto_increment,
                         Type varchar(10), Title varchar(100), Description TEXT CHARSET utf8a, Job_id varchar(36),
                         Created_at DATE, Company varchar(100), location varchar(50),
@@ -36,7 +35,6 @@ def query_sql(cursor, query):
 
 # Add a new job
 def add_new_job(cursor, jobdetails):
-    ## Add your code here
     Type = jobdetails['Type']
     Title = jobdetails['Title']
     Description = jobdetails['Description']
